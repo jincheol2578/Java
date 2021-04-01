@@ -11,13 +11,14 @@ public class VendingMachineMission3 {
 		int price = 0;
 		System.out.print("돈을 주입해 주세요. : ");
 		price = scan.nextInt();
+		System.out.println("<메뉴>");
+		System.out.println("0. 종료");
+		for (int i = 0; i < StrArr.length; i++) {
+			System.out.printf("%d. %s (%,d원)\n", i + 1, StrArr[i], intArr[i]);
+		}
+		System.out.println("----------------------");
 		while (true) {
-			System.out.println("<메뉴>");
-			System.out.println("0. 종료");
-			for (int i = 0; i < StrArr.length; i++) {
-
-				System.out.printf("%d. %s (%,d원)\n", i + 1, StrArr[i], intArr[i]);
-			}
+			System.out.print("선택 > ");
 			int scanVal = scan.nextInt();
 			int selectedIdx = scanVal - 1;
 			if (scanVal == 0) {
@@ -34,5 +35,4 @@ public class VendingMachineMission3 {
 			System.out.printf("%s를 선택하셨습니다. (남은 금액 %,d원)\n", StrArr[selectedIdx], price);
 		}
 	}
-
 }
