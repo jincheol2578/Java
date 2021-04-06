@@ -9,9 +9,20 @@ public class MethodMission10 {
 		String[] menuNmArr = { "콜라", "사이다", "환타", "스프라이트", "망고주스", "포도주스" };
 		int[] menuPriceArr = { 1000, 1200, 1300, 1500, 2000, 3000 };
 
-		printMenu(menuNmArr, menuPriceArr);
-		int selectedNum = scan.nextInt();
-		System.out.println("끝");
+		Drink[] drinkArr = new Drink[6];
+		
+		for (int i = 0; i < drinkArr.length; i++) {
+			Drink drink = new Drink();
+			drink.nm = menuNmArr[i];
+			drink.price = menuPriceArr[i];
+
+			drinkArr[i] = drink; 
+		}
+		printMenu3(drinkArr);
+
+//		printMenu(menuNmArr, menuPriceArr);
+//		int selectedNum = scan.nextInt();
+//		System.out.println("끝");
 	}
 
 	public static boolean chooseMenu(Scanner scan, int len) {
@@ -19,8 +30,9 @@ public class MethodMission10 {
 		int seletedNum = scan.nextInt();
 		return true;
 	}
+
 	public static void printMenu(String[] mnArr, int[] priceArr) {
-		
+
 	}
 
 	public static void printMenu2(String[] mnArr, int[] priceArr) {
@@ -29,6 +41,14 @@ public class MethodMission10 {
 		for (int i = 0; i < mnArr.length; i++) {
 			str += String.format("%d. %s (%,d원)\n", i + 1, mnArr[i], priceArr[i]);
 		}
+	}
+	public static void printMenu3(Drink[] drinkArr) {
+		String str = "<메뉴>\n0. 종료\n";
+		for(int i = 0; i<drinkArr.length; i++) {
+			Drink item = drinkArr[i];
+			str += String.format("%d. %s (%,d원)\n", i+1, item.nm, item.price);
+		}
+		System.out.println(str);
 	}
 
 }
