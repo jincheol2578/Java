@@ -1,0 +1,8 @@
+
+
+
+종류     private   default   protected   public
+class     O			O			O			O
+package   X			O			O			O
+상속관계	  X			X			O			O
+전체		  X		 	X			X			O

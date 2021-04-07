@@ -10,6 +10,7 @@ public class InstanceExam {
 		dog.bark();
 	}
 }
+
 class Dog{
 	String name;
 	String jong;
