@@ -32,6 +32,7 @@ class Tv {
 	// return 타입이 없다.
 	// 생성자는 객체 생성할때만 사용 할 수 있다.
 	// 기본 생성자는 컴파일러가 만들어준다(생성자가 없을 시)
+	// this. 멤버필드, 메소드 접근   this() 생성자 호출
 	Tv(String brand, int inch, int maxChannel, int maxVolume) {
 		this.brand = brand;
 		this.inch = inch;
