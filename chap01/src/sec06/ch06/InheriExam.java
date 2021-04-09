@@ -16,11 +16,6 @@ class Animal{
 	String name;
 	int age; 
 	
-	public Animal(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
 
 	void howling() {
 		System.out.printf("%s가 운다\n",name);
@@ -28,9 +23,9 @@ class Animal{
 }
 
 class Cat extends Animal{
-	Cat(){
-		super("",0);
-	}
+//	Cat(){
+//		super("",0);
+//	}
 	void lick() {
 		System.out.printf("%s가 핥다\n",name);
 	}
