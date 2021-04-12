@@ -20,6 +20,7 @@ class Animal{
 	void howling() {
 		System.out.printf("%s가 운다\n",name);
 	}
+	
 }
 
 class Cat extends Animal{
